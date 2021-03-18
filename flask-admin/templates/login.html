@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login admin</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-grid.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-grid.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-reboot.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-reboot.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.bundle.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.min.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='')}}">
+    </head>
+    <body>
+        <!-- start the header section  -->
+         <header class="jumbotron p-3">
+            <h1 class="well text-center">LOGIN PAGE</h1>
+  
+          </header>
+          <!-- end the header section -->
+
+       
+        <!-- add user form popup begin -->
+        <div id="mymodal" class="model-fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title"> ADD USER</h4>
+  
+                </div>
+                <div class="modal-body">
+                  <form action="" method="POST">
+                  
+                    
+                    <div class="form-group">
+                      <label for="">USERNAME</label>
+                      <input type="text" class="form-control" name="username" required="1">
+  
+                    </div>
+                    <div class="form-group">
+                      <label for="">EMAIL</label>
+                      <input type="email" class="form-control" name="email" required="1">
+  
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary" type="submit">LOGIN</button>
+  
+                    </div>
+                  </form>
+  
+                </div>
+                
+  
+              </div>
+  
+            </div>
+  
+          </div>
+          <!-- add user form popup end -->
+    </body>
+</html>

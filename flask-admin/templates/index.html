@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Flask-Admin</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-grid.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-grid.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-reboot.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-reboot.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.bundle.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='js/bootstrap.min.js')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='')}}">
+    </head>
+    <body>
+        <!-- start the header section  -->
+        <header class="jumbotron p-3">
+          <h1 class="well text-center">{{user}} FLASK PYTHON</h1>
+
+        </header>
+        <!-- end the header section -->
+
+        <!-- begin the data dispaly and action row -->
+        <div class="container">
+          <div class="row">
+            <div class="col md-12">
+              <div class="jumbotron p-3">
+
+                <h2 class=""> MANAGE <b> USERS </b> {{email}} <a href="{{url_for('insert')}}" type="menu" class="btn btn-success float-right " data-toggle="modal" data-target="#mymodal">ADD USER</a> </h2>
+
+                <script type="text/javascript">
+
+                </script>
+
+                <table class="table table-hover table-dark">
+                
+                  <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>USERNAME</th>
+                    <th>EMAILS</th>
+                    <th>ACTIONS</th>
+                  </tr>
+                   {% for i in data %} 
+                  <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.username}}</td>
+                    <td>{{i.email}}</td>
+                    <td>
+                      <a href="#modaledit" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a>
+                      <a href="#" class="btn btn-warning btn-xs" onclick="return confirm('Are you sure you wanna delete ..?')">Delete</a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </table>
+
+               
+              </div>
+
+            </div>
+            
+          </div>
+
+          
+        </div>
+        <!-- end data display and action row -->
+      
+        
+    </body>
+</html>
