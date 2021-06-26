@@ -7,7 +7,7 @@ db=TinyDB("data.json")
 query=Query()
 
 user=db.search(query.name=="junior")
-user=user[0]
+
 print(user)
 
 def authorization(f):
@@ -18,7 +18,7 @@ def authorization(f):
         if "authorization" in request.headers:
             token=request.headers['authorization']
 
-            if token != user['key']:
+            if token != user[0['key']]:
                 print("invalid token")
                 return {"feedback":"invalid token"}
 
