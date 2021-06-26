@@ -81,6 +81,14 @@ def update():
     else:
         return redirect('/')
 
+@app.route("/delete/<uid>")
+def delete(uid):
+    user=Users.query.filter_by(id=uid).first()
+    db.session.delete(user)
+    db.session.commit()
+
+    return redirect('/admin')
+
 @app.errorhandler(404)
 def errorpage(error):
 
