@@ -1,6 +1,5 @@
 from  flask import Blueprint
-from .model import Admins
-from ..main import db
+from .model import *
 
 myadmin=Blueprint('myadmin',__name__,url_prefix="/myadmin")
 
