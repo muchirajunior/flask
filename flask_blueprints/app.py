@@ -1,4 +1,5 @@
 #this is the wsgi file
+#running the scaled web app in myapp folder
 from myapp import app 
 
 if __name__=="__main__":
