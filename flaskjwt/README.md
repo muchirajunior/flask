@@ -10,12 +10,12 @@ in this example were are using the flask_jwt_extended library
 
 ### run the application
 -----------------------
-nabvigate to the directory and use either of the following :
+navigate to the directory and use either of the following commands:
 - $ flask run
 - $ python app.py
 - $ gunicorn app:app
 
 ### test the application
 -----------------------
-to test run the test file by using:
+to test run the test file by using command:
  $ python test.py
